@@ -40,9 +40,8 @@ const CartItem = ({ onContinueShopping }) => {
   const handleDecrement = (item) => {
     if( item.quantity <= 1){
       return dispatch( removeItem(item.name) );
-      
     }
-    dispatch( updateQuantity( {name: item.name, quantity: item.quantity - 1} ) )
+    dispatch( updateQuantity( { name: item.name, quantity: item.quantity - 1} ) )
 
   };
 
@@ -50,9 +49,6 @@ const CartItem = ({ onContinueShopping }) => {
     dispatch( removeItem( item.name ))
   };
 
-  window.onkeydown = ()=>{
-    console.log("gay")
-  }
 
   // Calculate total cost based on quantity for an item
   const calculateTotalCost = (item) => {
